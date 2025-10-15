@@ -20,24 +20,29 @@
 
     </head>
     <body>
-
         <header>
-             <nav class="navbar">
+            <nav class="navbar">
                 <div class="logo">
-                    <img src="img/logo.png" alt="Logo" class="logo-img">
+                <img src="img/logo.png" alt="Logo" class="logo-img">
                 </div>
 
                 <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#hobbies">Hobbies</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
                 </ul>
+
+                <!-- Hamburger Icon -->
+                <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                </div>
             </nav>
         </header>
-
         <section class="hero" id="home">
             <h1>A Frontend and Mobile Developer</h1>
             <div class="scroll-moving">
@@ -375,6 +380,14 @@
         <!-- jQuery + Owl Carousel JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script>
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        </script>
 
         <script>
         $(".owl-carousel").owlCarousel({

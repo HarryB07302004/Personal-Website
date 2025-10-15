@@ -1,0 +1,124 @@
+/* =======================
+   📱 RESPONSIVE DESIGN
+   ======================= */
+
+/* For Tablets (Portrait & Landscape) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img {
+    max-width: 100%;
+  }
+
+  .skill-row {
+    gap: 80px;
+  }
+
+  .hobbies-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .footer-content {
+    gap: 40px;
+  }
+}
+
+/* For Mobile Phones */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .hero {
+    padding: 100px 15px 60px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .btn, .btn-dark {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about h2, .skills h2, .projects h2, .reviews h2, .contact h2 {
+    font-size: 2rem;
+  }
+
+  .skills-category {
+    font-size: 1rem;
+  }
+
+  .skill-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hobbies-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-card {
+    padding: 15px;
+  }
+
+  .project-card h3 {
+    font-size: 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-section h3 {
+    font-size: 1.1rem;
+  }
+}
