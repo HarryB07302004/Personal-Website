@@ -4,29 +4,39 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Harry Bundang | Portfolio</title>
+        <!-- Main and Responsive Stylesheets -->
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="responsive.css">
+        
+        <!-- Google Fonts (Orbitron for headers, Press Start for text) -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Owl Carousel (for project section slider) -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
-        <!-- Font Awesome for icons -->
+        <!-- Font Awesome (for social and contact icons) -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        
+        
 
     </head>
     <body>
+        <!-- ================= HEADER SECTION ================= -->
         <header>
             <nav class="navbar">
+                <!-- Logo Area -->
                 <div class="logo">
                 <img src="img/logo.png" alt="Logo" class="logo-img">
                 </div>
 
+                <!-- Navigation Menu -->
                 <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -36,7 +46,7 @@
                 <li><a href="#contact">Contact</a></li>
                 </ul>
 
-                <!-- Hamburger Icon -->
+                <!-- Hamburger Icon (Visible on mobile only) -->
                 <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -44,8 +54,10 @@
                 </div>
             </nav>
         </header>
+        <!-- ================= HERO SECTION ================= -->
         <section class="hero" id="home">
             <h1>A Frontend and Mobile Developer</h1>
+            <!-- Moving scrolling text animation -->
             <div class="scroll-moving">
                 <ul>
                     <li>
@@ -74,6 +86,7 @@
                     </li>
                 </ul>
 
+                <!-- Duplicate list for seamless loop animation -->
                 <ul aria-hidden="true">
                     <li>
                         <span class="lang">UI/UX DESIGN</span>
@@ -101,16 +114,21 @@
                     </li>
                 </ul>
             </div>
+            <!-- Hero buttons -->
             <div class="hero-buttons">
                 <a href="#" class="btn">⬇ Download CV</a>
                 <a href="#projects" class="btn-dark">Check My Projects ⬇</a>
             </div>
         </section>
 
+        <!-- ================= ABOUT SECTION ================= -->
         <section class="about" id="about">
             <h2>ABOUT</h2>
             <div class="about-container">
+                <!-- Profile image -->
                 <img src="img/about-img.png" alt="Harry Bundang" class="about-img">
+
+                <!-- About text description -->
                 <p>
                     Hi, I am <b>Harry Maliwat Bundang</b>! I'm an IT student at Columban College, Inc. with a strong interest in mobile and frontend development. I enjoy creating user-friendly and responsive applications that not only look great but also perform well across different devices. My passion lies in turning ideas into interactive digital experiences using technologies like HTML, CSS, JavaScript. I also have a bit knowledge in Java and Python. But sometimes I think that suits on me and I know that I am capable of doing it is being a Data Analyst. I want this field because I know that I will love it and pursing this field will definitely bring for who I am and who I want to be in the future.<br>
                     <br>
@@ -120,9 +138,11 @@
             </div>
         </section>
 
+        <!-- ================= HOBBIES SECTION ================= -->
         <section class="hobbies" id="hobbies">
             <h2>HOBBIES</h2>
             <div class="hobbies-container">
+                <!-- Hobby cards (8 total) -->
                 <div class="hobby-card">
                     <div class="hobby-icon">
                         <img src="img/hobby1.png" alt="Online Games">
@@ -189,11 +209,12 @@
             </div>
         </section>
 
+        <!-- ================= SKILLS SECTION ================= -->
         <section class="skills" id="skills">
             <h2>SKILLS</h2>
             <div class="skills-container">
 
-
+                <!-- Programming Languages -->
                 <h3 class="skills-category">Progamming Language</h3>
                 <div class="skill-row">
                     <div class="skill-card">
@@ -213,6 +234,7 @@
                     </div>
                 </div>
 
+                <!-- Front-End Skills -->
                 <h3 class="skills-category">Front-End</h3>
                 <div class="skill-row">
                     <div class="skill-card">
@@ -232,6 +254,7 @@
                     </div>
                 </div>
 
+                <!-- Back-End Skills -->
                 <h3 class="skills-category">Back-End</h3>
                 <div class="skill-row">
                     <div class="skill-card">
@@ -245,10 +268,12 @@
             </div>
         </section>
 
+        <!-- ================= REVIEWS SECTION ================= -->
         <section class="reviews" id="reviews">
             <h2>REVIEWS</h2>
             <div class="reviews-box">
 
+                <!-- Individual review cards -->
                 <div class="review">
                     <p class="review-title">1. John Santos - Startup Founder</p>
                     <p class="review-text">
@@ -284,9 +309,11 @@
             </div>
         </section>
 
+        <!-- ================= PROJECTS SECTION ================= -->
         <section class="projects" id="projects">
             <h2>PROJECTS</h2>
 
+            <!-- Owl Carousel for sliding project cards -->
             <div class="owl-carousel owl-theme">
                 <div class="project-card">
                     <h3>Shoes Website</h3>
@@ -326,8 +353,11 @@
             </div>
         </section>
 
+        <!-- ================= CONTACT SECTION ================= -->
         <section class="contact" id="contact">
             <h2>CONTACT</h2>
+
+            <!-- Contact form -->
             <form class="contact-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" placeholder="Your Name..." required>
@@ -340,9 +370,12 @@
             </form>
         </section>
 
+        <!-- ================= FOOTER SECTION ================= -->
         <footer class="footer">
             <div class="footer-top">
                 <h2>Harry Bundang</h2>
+
+                <!-- Social media links -->
                 <div class="footer-socials">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-facebook-messenger"></i></a>
@@ -354,6 +387,7 @@
 
             <hr>
 
+            <!-- Footer contact and navigation -->
             <div class="footer-content">
                 <div class="footer-section contact">
                     <h3>Contact Us</h3>
@@ -372,15 +406,19 @@
                 </div>
             </div>
 
+            <!-- Footer bottom note -->
             <div class="footer-bottom">
                 <p>Copyright © Harry Bundang. All rights reserved.</p>
             </div>
-
         </footer>
 
-        <!-- jQuery + Owl Carousel JS -->
+        <!-- ================= JAVASCRIPT SECTION ================= -->
+
+        <!-- jQuery + Owl Carousel JS for the projects slider -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        
+        <!-- Hamburger Menu Toggle -->
         <script>
             const hamburger = document.querySelector('.hamburger');
             const navLinks = document.querySelector('.nav-links');
@@ -390,6 +428,7 @@
             });
         </script>
 
+        <!-- Owl Carousel Setup -->
         <script>
         $(".owl-carousel").owlCarousel({
             loop: true,

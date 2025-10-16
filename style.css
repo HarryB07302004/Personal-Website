@@ -1,21 +1,28 @@
-/* RESET */
+/* =========================================================
+   GLOBAL RESET & DEFAULT SETTINGS
+   ========================================================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Header */
+body {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* =========================================================
+   HEADER & NAVBAR SECTION
+   ========================================================= */
 header {
   width: 100%;
-  background-color: #000;
+  background-color: #000; 
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 1000; 
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -23,7 +30,6 @@ header {
   padding: 15px 30px;
 }
 
-/* Logo */
 .logo {
   display: flex;
   align-items: center;
@@ -36,7 +42,6 @@ header {
   border-radius: 50%;
 }
 
-/* Nav Links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -46,7 +51,7 @@ header {
 .nav-links li a {
   text-decoration: none;
   color: white;
-  font-family: 'Poppins', sans-serif;  /* ✅ keeps your font style */
+  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   font-weight: bold;
   transition: color 0.3s ease;
@@ -56,14 +61,17 @@ header {
   color: gold;
 }
 
-/* Hamburger Icon (Hidden on desktop) */
+/* =========================================================
+   HAMBURGER MENU (FOR MOBILE)
+   ========================================================= */
 .hamburger {
-  display: none;
+  display: none; 
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
 }
 
+/* Hamburger bars */
 .hamburger span {
   width: 25px;
   height: 3px;
@@ -72,21 +80,22 @@ header {
   transition: all 0.3s ease;
 }
 
-/* Hamburger animation (optional) */
+/* Hamburger toggle animation */
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-
 .hamburger.active span:nth-child(2) {
   opacity: 0;
 }
-
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Responsive */
+/* =========================================================
+   RESPONSIVE NAVIGATION MENU
+   ========================================================= */
 @media (max-width: 768px) {
+  /* Hidden by default on small screens */
   .nav-links {
     display: none;
     position: absolute;
@@ -100,17 +109,20 @@ header {
     gap: 20px;
   }
 
+  /* When active, show vertically */
   .nav-links.active {
     display: flex;
   }
 
+  /* Show hamburger icon */
   .hamburger {
     display: flex;
   }
 }
 
-
-
+/* =========================================================
+   SCROLLING MARQUEE / MOVING TEXT SECTION
+   ========================================================= */
 .scroll-moving {
   font-size: 8px;
   font-family: "Press Start 2P", system-ui;
@@ -126,6 +138,7 @@ header {
   margin-bottom: 1.5rem;
 }
 
+/* Inner scrolling list */
 .scroll-moving ul {
   list-style: none;
   flex-shrink: 0;
@@ -134,300 +147,310 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: var(--gap);
-
   animation: scroll 20s linear infinite;
-
 }
 
+/* Pause on hover */
 .scroll-moving:hover ul {
   animation-play-state: paused;
 }
 
+/* Animation keyframes */
 @keyframes scroll {
   to {
     transform: translateX(calc(-100% - var(--gap)));
   }
 }
 
+/* Highlight for languages or tags */
 .scroll-moving .lang {
   font-weight: bold;
 }
 
+/* =========================================================
+   HERO SECTION (HOME)
+   ========================================================= */
 .hero {
-    background: url(img/home-image.png) no-repeat center center/cover;
-    position: relative;
-    text-align: center;
-    padding: 120px 20px 80px;
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+  background: url(img/home-image.png) no-repeat center center/cover;
+  position: relative;
+  text-align: center;
+  padding: 120px 20px 80px;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-img {
-    width: 350px;
-    height: auto;
-    margin-bottom: 50px;
+  width: 350px;
+  height: auto;
+  margin-bottom: 50px;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    font-family: 'Orbitron', sans-serif;
-    margin-bottom: 20px;
+  font-size: 3.5rem;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 20px;
 }
 
 .hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 .btn {
-    display: inline-block;
-    padding: 12px 20px;
-    background: #000;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border: 5px;
-    border-radius: 10px;
-    transition: 0.3s;
+  display: inline-block;
+  padding: 12px 20px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
 .btn-dark {
-    display: inline-block;
-    padding: 12px 20px;
-    background: #000;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border: 5px;
-    border-radius: 10px;
-    transition: 0.3s;
+  display: inline-block;
+  padding: 12px 20px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
-.btn:hover {
-    background: gold;
-}
-
+.btn:hover,
 .btn-dark:hover {
-    background: gold;
+  background: gold;
 }
 
+/* =========================================================
+   ABOUT SECTION
+   ========================================================= */
 .about {
-    padding: 80px 20px;
-    text-align: center;
-    background: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  background: #fff;
 }
 
 .about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .about-container {
-    max-width: 1000px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 30px;
-    text-align: left;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  text-align: left;
 }
 
 .about-img {
-    max-width: 450px;
-    border-radius: 10px;
+  max-width: 450px;
+  border-radius: 10px;
 }
 
 .about p {
-    flex: 1;
-    font-size: 1rem;
-    line-height: 1.7;
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
+/* =========================================================
+   HOBBIES SECTION
+   ========================================================= */
 .hobbies {
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 80px 20px;
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
 }
 
 .hobbies h2 {
-    font-size: 2.5rem;
-    font-family: 'Orbitron', sans-serif;
-    margin-bottom: 50px;
+  font-size: 2.5rem;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 50px;
 }
 
 .hobbies-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 40px;
-    max-width: 1100px;
-    margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .hobby-card {
-    text-align: center;
+  text-align: center;
 }
 
 .hobby-icon {
-    background: #fff;
-    padding: 25px;
-    border-radius: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: 120px;
-    height: 120px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 120px;
+  height: 120px;
 }
 
 .hobby-icon img {
-    max-width: 70px;
-    max-height: 70px;
+  max-width: 70px;
+  max-height: 70px;
 }
 
 .hobby-icon:hover {
-    transform: translateY(-10px);
-    background-color: gold;
-    box-shadow: 0 8px 20px rgba(255, 77, 77, 0.4);
+  transform: translateY(-10px);
+  background-color: gold;
+  box-shadow: 0 8px 20px rgba(255, 77, 77, 0.4);
 }
 
 .hobby-card h3 {
-    margin-top: 15px;
-    font-family: 'Orbitron', sans-serif;
+  margin-top: 15px;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .hobby-card p {
-    margin-top: 10px;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    max-width: 250px;
-    margin-left: auto;
-    margin-right: auto;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* =========================================================
+   SKILLS SECTION
+   ========================================================= */
 .skills {
-    background: #fff;
-    color: #111;
-    text-align: center;
-    padding: 80px 20px;
+  background: #fff;
+  color: #111;
+  text-align: center;
+  padding: 80px 20px;
 }
 
 .skills h2 {
-    font-size: 2.5rem;
-    font-family: 'Orbitron', sans-serif;
-    margin-bottom: 40px;
+  font-size: 2.5rem;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 40px;
 }
 
 .skills-category {
-    text-align: center;
-    font-size: 1,2rem;
-    font-weight: bold;
-    margin: 40px 0 20px;
-    font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  margin: 40px 0 20px;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .skill-row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 300px;
-    margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 300px;
+  margin-bottom: 40px;
 }
 
 .skill-card img {
-    max-width: 200px;
-    display: block;
-    margin: 0 auto 10px;
+  max-width: 200px;
+  display: block;
+  margin: 0 auto 10px;
 }
 
 .skill-card p {
-    font-family: 'Orbitron', sans-serif;
-    margin-bottom: 10px;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 10px;
 }
 
 .progress {
-    background: #444;
-    border-radius: 8px;
-    overflow: hidden;
-    height: 25px;
-    position: relative;
+  background: #444;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 25px;
+  position: relative;
 }
 
 .progress-bar {
-    height: 100%;
-    background: linear-gradient(to right, #f4e04d, #f2c94c);
-    text-align: right;
-    padding-right: 8px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #111;
-    line-height: 25px;
+  height: 100%;
+  background: linear-gradient(to right, #f4e04d, #f2c94c);
+  text-align: right;
+  padding-right: 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #111;
+  line-height: 25px;
 }
 
+/* =========================================================
+   REVIEWS SECTION
+   ========================================================= */
 .reviews {
-    background: #222;
-    padding: 80px 20px;
-    text-align: center;
-    color: #222;
+  background: #222;
+  padding: 80px 20px;
+  text-align: center;
+  color: #222;
 }
 
 .reviews h2 {
-    font-size: 2.5rem;
-    font-family: 'Orbitron', sans-serif;
-    margin-bottom: 40px;
-    color: #fff;
+  font-size: 2.5rem;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 40px;
+  color: #fff;
 }
 
 .reviews-box {
-    max-width: 900px;
-    margin: auto;
-    background: #fff;
-    border: 2px solid #fff;
-    padding: 40px;
-    text-align: left;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  border: 2px solid #fff;
+  padding: 40px;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .review {
-    margin-bottom: 30px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
 }
 
 .review:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .reviews-title {
-    font-weight: bold;
-    font-size: 1.1rem;
-    font-family: 'Orbitron', sans-serif;
-    margin-bottom: 10px;
-    color: #f5f5f5;
+  font-weight: bold;
+  font-size: 1.1rem;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 10px;
+  color: #f5f5f5;
 }
 
 .review-text {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    line-height: 1.6;
-    color: #222;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #222;
 }
 
 .stars {
-    color: gold;
-    font-size: 1.2rem;
+  color: gold;
+  font-size: 1.2rem;
 }
 
-/* Projects Section */
-/* Projects Carousel Section */
+/* =========================================================
+   PROJECTS SECTION
+   ========================================================= */
 .projects {
   background: #fff;
   padding: 80px 20px;
@@ -476,13 +499,13 @@ header {
 .github-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;              /* smaller space between logo and text */
-  padding: 6px 10px;     /* smaller button size */
+  gap: 6px;
+  padding: 6px 10px;
   border: 1.5px solid #ccc;
   border-radius: 6px;
   background: #fff;
   color: black;
-  font-size: 0.8rem;     /* smaller text */
+  font-size: 0.8rem;
   font-family: 'Orbitron', sans-serif;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -501,8 +524,8 @@ header {
 
 .project-img {
   width: 100%;
-  max-height: 200px;   /* keeps it neat */
-  object-fit: cover;   /* crops instead of stretching */
+  max-height: 200px;
+  object-fit: cover;
   border-radius: 10px;
   margin-bottom: 15px;
 }
@@ -524,7 +547,9 @@ header {
   background: #333 !important;
 }
 
-/* Contact Section */
+/* =========================================================
+   CONTACT SECTION
+   ========================================================= */
 .contact {
   background-color: #2b2b2b;
   color: white;
@@ -568,6 +593,9 @@ header {
   color: #7a7a7a;
 }
 
+/* =========================================================
+   FOOTER SECTION
+   ========================================================= */
 .footer {
   background-color: #fff;
   color: #111;
@@ -587,7 +615,7 @@ header {
 }
 
 .footer-socials a {
-  color: #111   ;
+  color: #111;
   font-size: 1.2rem;
   border: 2px solid #111;
   border-radius: 50%;
